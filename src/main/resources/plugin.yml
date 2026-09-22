@@ -1,0 +1,8 @@
+name: DoubleDoors
+author: Jannyboy11
+main: com.janboerman.doubledoors.DoubleDoorsPlugin
+version: ${project.version}
+api-version: 1.15
+description: Opens connected doors and trapdoors.
+
+folia-supported: true
