@@ -6,6 +6,7 @@ import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.block.data.Openable;
+import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -28,6 +29,9 @@ public class PlayerInteractListener implements Listener {
     public void onPlayerInteract(PlayerInteractEvent event) {
         if (isFakeEvent(event)) return;
 
+        Player player = event.getPlayer();
+        if (!player.hasPermission(plugin.getInteractPermission())) return;
+
         if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
             Block source = event.getClickedBlock();
             Material type = source.getType();
@@ -40,7 +44,7 @@ public class PlayerInteractListener implements Listener {
                     BlockData sourceBlockData = source.getBlockData();
                     adjustNeighbouringBlocks(source, otherDoorBlock -> {
                         var openableSourceBlockData = (Openable) sourceBlockData;
-                        FakePlayerInteractEvent fakeEvent = new FakePlayerInteractEvent(event.getPlayer(), Action.RIGHT_CLICK_BLOCK, event.getItem(), otherDoorBlock, event.getBlockFace());
+                        FakePlayerInteractEvent fakeEvent = new FakePlayerInteractEvent(player, Action.RIGHT_CLICK_BLOCK, event.getItem(), otherDoorBlock, event.getBlockFace());
                         plugin.getServer().getPluginManager().callEvent(fakeEvent);
                         if (fakeEvent.useInteractedBlock() != Event.Result.DENY) {
                             var otherBlockData = (Openable) otherDoorBlock.getBlockData();

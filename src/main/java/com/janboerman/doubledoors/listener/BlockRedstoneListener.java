@@ -23,6 +23,7 @@ public class BlockRedstoneListener implements Listener {
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onRedstonePowerChange(BlockRedstoneEvent event) {
         if (isFakeEvent(event)) return;
+        if (!plugin.isRedstoneEnabled()) return;
 
         Block sourceDoor = event.getBlock();
         int newPower = event.getNewCurrent();

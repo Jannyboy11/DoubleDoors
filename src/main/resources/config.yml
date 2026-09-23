@@ -1,0 +1,2 @@
+# Whether redstone power also powers adjacent doors, trapdoors and fence gates.
+redstone: true

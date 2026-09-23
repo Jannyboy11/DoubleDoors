@@ -6,3 +6,17 @@ api-version: 1.15
 description: Opens connected doors and trapdoors.
 
 folia-supported: true
+
+commands:
+  doubledoors-reload:
+    description: reload the configuration
+    permission: doubledoors.reload
+    aliases: [ddreload]
+
+permissions:
+  doubledoors.reload:
+    description: Gives access to the doubledoors-reload command.
+    default: op
+  doubledoors.interact:
+    description: Lets the player open adjacent doors, trapdoors and fence gates automatically
+    default: true
