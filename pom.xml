@@ -10,7 +10,7 @@
 
     <scm>
         <developerConnection>scm:git:ssh://git@github.com/Jannyboy11/DoubleDoors.git</developerConnection>
-        <tag>v1.1</tag>
+        <tag>v1.5</tag>
     </scm>
 
     <distributionManagement>
