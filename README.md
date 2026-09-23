@@ -2,15 +2,18 @@
 
 Opens adjacent doors and trapdoors of the same type!
 
+Do you like this plugin? Then please leave a review on [MC-Foundry](https://mc-foundry.com/p/doubledoors) or [SpigotMC](https://www.spigotmc.org/resources/doubledoors.138999/)!
+
 ## Features
 
 - Opens adjacent doors and trapdoors of the same type on player interaction.
 - Powers adjacent doors and trapdoors of the type on redstone power change.
 - Fires events for compatibility with protection plugins.
+- Compatible with Minecraft 1.15.2 and up, Java 11 and up.
 
 ## Compiling
 
-Prerequisites: JDK 11 or higher, Apache Maven.
+Prerequisites: JDK 25 or higher, Apache Maven.
 
 Then run `mvn package` to build the plugin .jar file.
 
