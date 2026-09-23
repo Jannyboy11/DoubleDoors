@@ -11,6 +11,13 @@ Do you like this plugin? Then please leave a review on [MC-Foundry](https://mc-f
 - Fires events for compatibility with protection plugins.
 - Compatible with Minecraft 1.15.2 and up, Java 11 and up.
 
+### commands
+- `/doubledoors-reload`: reloads the configuration.
+
+### permissions
+- `doubledoors.interact`: enables double door/trapdoor/fence gate interaction for the owner of the permission.
+- `doubledoors.reload`: allows acces to the doubledoors-reload command.
+
 ## Compiling
 
 Prerequisites: JDK 25 or higher, Apache Maven.
