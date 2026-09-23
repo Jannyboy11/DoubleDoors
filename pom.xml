@@ -27,6 +27,7 @@
     </distributionManagement>
 
     <build>
+        <finalName>DoubleDoors</finalName>
         <defaultGoal>clean package</defaultGoal>
         <plugins>
             <!-- Maven Compiler Plugin -->
