@@ -16,5 +16,5 @@ Then run `mvn package` to build the plugin .jar file.
 
 ## Releasing
 
-- Run `mvn release:prepare` and fill in the correct version numbers.
+- Run `mvn release:prepare -DignoreSnapshots` and fill in the correct version numbers.
 - Run `mvn release:perform` and `git push`.
