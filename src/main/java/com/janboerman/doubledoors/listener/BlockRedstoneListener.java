@@ -9,6 +9,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockRedstoneEvent;
 
+import static com.janboerman.doubledoors.api.DoubleDoorsAPI.isFakeEvent;
 import static com.janboerman.doubledoors.listener.SharedListenerLogic.adjustNeighbouringBlocks;
 
 public class BlockRedstoneListener implements Listener {
@@ -21,7 +22,7 @@ public class BlockRedstoneListener implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onRedstonePowerChange(BlockRedstoneEvent event) {
-        if (event instanceof FakeBlockRedstoneEvent) return;
+        if (isFakeEvent(event)) return;
 
         Block sourceDoor = event.getBlock();
         int newPower = event.getNewCurrent();

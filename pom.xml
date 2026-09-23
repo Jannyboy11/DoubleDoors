@@ -19,6 +19,30 @@
                     <release>11</release>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.12.0</version>
+                <configuration>
+                    <!-- spigot api javadoc -->
+                    <links>
+                        <link>https://hub.spigotmc.org/javadocs/spigot/</link>
+                    </links>
+
+                    <!-- only show protected and public stuff -->
+                    <show>protected</show>
+
+                    <!-- who needs help, anyway? -->
+                    <nohelp>true</nohelp>
+
+                    <!-- the javadoc tool is too picky for me -->
+                    <failOnError>false</failOnError>
+
+                    <!-- so that proper hyperlinks to standard jdk classes are generated -->
+                    <additionalOptions>-source 25</additionalOptions>
+                </configuration>
+            </plugin>
         </plugins>
 
         <resources>

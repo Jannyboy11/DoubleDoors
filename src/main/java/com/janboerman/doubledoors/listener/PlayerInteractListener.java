@@ -13,6 +13,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
+import static com.janboerman.doubledoors.api.DoubleDoorsAPI.isFakeEvent;
 import static com.janboerman.doubledoors.listener.SharedListenerLogic.adjustNeighbouringBlocks;
 
 public class PlayerInteractListener implements Listener {
@@ -25,7 +26,7 @@ public class PlayerInteractListener implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onPlayerInteract(PlayerInteractEvent event) {
-        if (event instanceof FakePlayerInteractEvent) return;
+        if (isFakeEvent(event)) return;
 
         if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
             Block source = event.getClickedBlock();
