@@ -23,7 +23,7 @@ jobs:
         with:
           name: DoubleDoors
           archive: false
-          path: target/DoubleDoors.jar
+          path: DoubleDoors/target/DoubleDoors.jar
 
   release:
     runs-on: ubuntu-latest
