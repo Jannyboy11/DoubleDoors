@@ -3,8 +3,6 @@ package com.janboerman.doubledoors;
 import com.janboerman.doubledoors.command.ReloadCommandExecutor;
 import com.janboerman.doubledoors.listener.BlockRedstoneListener;
 import com.janboerman.doubledoors.listener.PlayerInteractListener;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
 import org.bukkit.permissions.Permission;
 import org.bukkit.plugin.java.JavaPlugin;
 
