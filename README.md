@@ -13,3 +13,8 @@ Opens adjacent doors and trapdoors of the same type!
 Prerequisites: JDK 11 or higher, Apache Maven.
 
 Then run `mvn package` to build the plugin .jar file.
+
+## Releasing
+
+- Run `mvn release:prepare` and fill in the correct version numbers.
+- Run `mvn release:perform` and `git push`.
