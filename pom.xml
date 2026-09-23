@@ -5,8 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.janboerman.doubledoors</groupId>
-    <artifactId>DoubleDoors</artifactId>
+    <artifactId>double-doors</artifactId>
     <version>1.2-SNAPSHOT</version>
+
+    <name>DoubleDoors</name>
 
     <scm>
         <developerConnection>scm:git:ssh://git@github.com/Jannyboy11/DoubleDoors.git</developerConnection>
@@ -15,7 +17,7 @@
 
     <distributionManagement>
         <repository>
-            <id>github</id>
+            <id>github-doubledoors</id>
             <name>GitHub Jannyboy11 Apache Maven Packages</name>
             <url>https://maven.pkg.github.com/Jannyboy11/DoubleDoors</url>
         </repository>
