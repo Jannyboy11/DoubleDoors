@@ -8,9 +8,28 @@
     <artifactId>DoubleDoors</artifactId>
     <version>1.2-SNAPSHOT</version>
 
+    <scm>
+        <developerConnection>scm:git:ssh://git@github.com/Jannyboy11/DoubleDoors.git</developerConnection>
+        <tag>v1.1</tag>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Jannyboy11 Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/Jannyboy11/DoubleDoors</url>
+        </repository>
+        <snapshotRepository>
+            <id>repsy</id>
+            <name>Jannyboy11 Repsy Minecraft Repo</name>
+            <url>https://repo.repsy.io/mvn/jannyboy11/minecraft</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <build>
         <defaultGoal>clean package</defaultGoal>
         <plugins>
+            <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -20,6 +39,22 @@
                 </configuration>
             </plugin>
 
+            <!-- Maven Release Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
+                    <preparationGoals>clean verify</preparationGoals>
+                    <scmCommentPrefix>Maven Release Plugin:</scmCommentPrefix>
+                    <scmReleaseCommitComment>@{prefix} Release @{releaseLabel}&#x1f389;!</scmReleaseCommitComment>
+                    <scmDevelopmentCommitComment>@{prefix} Bump version.</scmDevelopmentCommitComment>
+                    <scmRollbackCommitComment>@{prefix} Roll back.</scmRollbackCommitComment>
+                </configuration>
+            </plugin>
+
+            <!-- Maven Javadoc Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
