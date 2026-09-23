@@ -39,6 +39,30 @@
                 </configuration>
             </plugin>
 
+            <!-- Maven Shade Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.6.2</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <relocations>
+                                <relocation>
+                                    <pattern>dev.faststats</pattern>
+                                    <shadedPattern>com.janboerman.doubledoors.libs.faststats</shadedPattern>
+                                </relocation>
+                            </relocations>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <!-- Maven Release Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -65,8 +89,8 @@
                         <link>https://hub.spigotmc.org/javadocs/spigot/</link>
                     </links>
 
-                    <!-- only show protected and public stuff -->
-                    <show>protected</show>
+                    <!-- only show public stuff -->
+                    <show>public</show>
 
                     <!-- who needs help, anyway? -->
                     <nohelp>true</nohelp>
@@ -93,6 +117,11 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
         </repository>
+
+        <repository>
+            <id>faststats-releases</id>
+            <url>https://repo.faststats.dev/releases</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -101,6 +130,12 @@
             <artifactId>spigot-api</artifactId>
             <version>1.15.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.faststats.metrics</groupId>
+            <artifactId>bukkit</artifactId>
+            <version>0.30.1</version>
         </dependency>
     </dependencies>
 
