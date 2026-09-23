@@ -19,5 +19,7 @@ public class ReloadCommandExecutor implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         plugin.reloadConfig();
         sender.sendMessage(ChatColor.GREEN + "DoubleDoors config reloaded!");
+
+        return true;
     }
 }

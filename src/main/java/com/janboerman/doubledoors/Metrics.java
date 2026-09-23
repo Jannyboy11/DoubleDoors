@@ -24,6 +24,7 @@ final class Metrics {
         bukkitContext = new BukkitContext.Factory(plugin, FASTSTATS_API_TOKEN)
                 .metrics(factory -> {
                     factory
+                            .addMetric(Metric.bool("redstone", () -> plugin.isRedstoneEnabled()))
                             .addMetric(Metric.number("major_java_version", () -> MAJOR_JAVA_VERSION))
                             .addMetric(Metric.number("uptime_days", () -> getDaysSince(start)));
                     if (installationTime != null) {
