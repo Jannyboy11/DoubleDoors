@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"com.janboerman.doubledoors"},{"l":"com.janboerman.doubledoors.api"},{"l":"com.janboerman.doubledoors.event"},{"l":"com.janboerman.doubledoors.listener"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"com.janboerman.doubledoors"},{"l":"com.janboerman.doubledoors.api"},{"l":"com.janboerman.doubledoors.command"},{"l":"com.janboerman.doubledoors.event"},{"l":"com.janboerman.doubledoors.listener"}];updateSearchResults();
