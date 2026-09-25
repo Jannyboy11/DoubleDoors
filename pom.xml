@@ -4,13 +4,13 @@
 
     <groupId>com.janboerman.doubledoors</groupId>
     <artifactId>double-doors</artifactId>
-    <version>1.6</version>
+    <version>1.7-SNAPSHOT</version>
 
     <name>DoubleDoors</name>
 
     <scm>
         <developerConnection>scm:git:ssh://git@github.com/Jannyboy11/DoubleDoors.git</developerConnection>
-        <tag>v1.6</tag>
+        <tag>v1.5</tag>
     </scm>
 
     <distributionManagement>
